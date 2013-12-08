@@ -5,11 +5,15 @@
 {% block content %}
     <form action="{{ path('_demo_contact') }}" method="POST" id="contact_form">
         {{ form_errors(form) }}
-
-        {{ form_row(form.email) }}
-        {{ form_row(form.message) }}
-
-        {{ form_rest(form) }}
+        <div class="mg-top">
+            {{ form_row(form.email) }}
+        </div>
+        <div class="mg-top">
+            {{ form_row(form.message) }}
+        </div>
+        <div class="mg-top">
+            {{ form_rest(form) }}
+        </div>
         <input type="submit" value="Send" class="symfony-button-grey" />
     </form>
 {% endblock %}
