@@ -1,0 +1,25 @@
+default:
+  extensions:
+    Behat\Symfony2Extension\Extension:
+      mink_driver: true
+    Behat\MinkExtension\Extension:
+      default_session: 'symfony2'
+      base_url: http://dom.dev/demo/
+  paths:
+    features: features
+  context:
+    class:  Acme\DemoBundle\Features\Context\FeatureContext
+    parameters:
+      base_url: http://dom.dev/demo/
+
+#ci:
+#  filters:
+#    tags: ~@wip && ~@tbd
+
+#wip:
+#  filters:
+#    tags: @wip
+
+#tbd:
+#  filters:
+#    tags: @tbd
